@@ -1,0 +1,31 @@
+{% extends "base.html" %} 
+{% block title %} Quiz {% endblock %} 
+
+<h1>Looking for Recommendations?</h1>
+<h3>You're at the right place.</h3>
+
+{% block content %} 
+<h1 class="text1">Looking for a Recommendation?</h1>
+<h3 class="text2">You're in the right place.</h3>
+<br>
+<!-- New Recommendations -->
+<div class="quiz_container">
+    <a href="/newquiz">
+    <button class="box" id="box1" name="t1">
+        New Recommendation
+        <br>
+        <p style="font-size: small;">Interested in something different? <br> Tailored suggestions based on new input and preferences.</p>
+    </button>
+    </a>
+    <a href="/quizsimilar">
+    <button class="box" id="box2" name="'t2">
+        Similar Recommendation
+        <br>
+        <p style="font-size: small;">Tailored suggestions based on past viewing history and your preferences.</p>
+    </button>
+    </a>
+</div>
+
+
+
+{% endblock %}

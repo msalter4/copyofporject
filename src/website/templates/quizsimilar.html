@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %} Similar Quiz {% endblock %}
+{% block content %}
+
+<form method="POST">
+    <h1 align="center" id="sign-up" style="color: white;">Current Recommendations</h3>
+    {% for key in displayed.keys() %}
+    <div class="form-group" style="color: white;">
+        <p>Title: {{ displayed[key]['title'] }}</p>
+        <p>URL: {{ displayed[key]['url'] }}</p>
+        <p>Year: {{ displayed[key]['year'] }}</p>
+        <input type="checkbox" id="w{{ key }}" name="w{{ key }}" value="{{ displayed[key]['movie_id'] }}">
+        <label for="w{{ key }}">Watched</label>
+
+        <input type="checkbox" id="ni{{ key }}" name="ni{{ key }}" value="{{ displayed[key]['movie_id'] }}">
+        <label for="ni{{ key }}">Not Interested</label>
+    </div>
+    {% endfor %}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,6 @@
+images, css, or javascript files will go in this static folder
+
+dummy user accounts:
+
+u: random@yahoo.com
+p: hello12345
