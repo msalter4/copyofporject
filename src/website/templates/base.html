@@ -32,11 +32,15 @@
       {% if user.is_authenticated %}
         <a href="/">Home</a>
         <a href="/quiz">Quizzes</a>
-        <a href="#" class="profile-button">Profile</a>
-            <!-- <li><a class="dropdown-item" href="profile">Go to my Profile</a></li>
-            <li><a class="dropdown-item" href="change_username">Change Username</a></li>
-            <li><a class="dropdown-item" href="change_password">Change Password</a></li>
-            <li><a class="dropdown-item" href="change_email">Change Email</a></li> -->
+        <div class="dropdown">
+          <button class="profile-button">Profile</button>
+            <a class="dropdown-content">
+              <a href="profile">Go to my Profile</a>
+              <a href="change_username">Change Username</a>
+              <a href="change_password">Change Password</a>
+              <a href="change_email">Change Email</a>
+            </div>
+          </a>
         <a href="/logout">Logout</a>
         {% else %}
         <a class="btnLogin-popup" href="/login">Login</a>
